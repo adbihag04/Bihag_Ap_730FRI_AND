@@ -1,0 +1,32 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#aec6cf"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_marginBottom="50dp"
+        android:hint=" Headline" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        android:layout_marginBottom="50dp"
+        android:hint="News Content"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:backgroundTint="#000036"
+        android:text="Add Headline" />
+</LinearLayout>
