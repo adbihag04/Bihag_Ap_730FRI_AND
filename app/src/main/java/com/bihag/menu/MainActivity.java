@@ -23,29 +23,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(android.view.MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_item1:
+        int id = item.getItemId();
 
-                AnotherFragment fragment = new AnotherFragment();
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, fragment)
-                        .addToBackStack(null)
-                        .commit();
-                return true;
-
-            case R.id.menu_item2:
-
-                MyDialogFragment dialog = new MyDialogFragment();
-                dialog.show(getSupportFragmentManager(), "MyDialog");
-                return true;
-
-            case R.id.menu_item3:
-
-                finish();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+        if (id == R.id.menu_item1) {
+            AnotherFragment fragment = new AnotherFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .addToBackStack(null)
+                    .commit();
+            return true;
+        } else if (id == R.id.menu_item2) {
+            MyDialogFragment dialog = new MyDialogFragment();
+            dialog.show(getSupportFragmentManager(), "MyDialog");
+            return true;
+        } else if (id == R.id.menu_item3) {
+            finish();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 }
